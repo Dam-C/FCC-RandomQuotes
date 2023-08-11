@@ -1,10 +1,10 @@
-import db from "./db.json";
 import "./App.css";
+import { useSelector, useDispatch } from "react-redux";
 
 function App() {
-  const possibleQuotes = db.length;
-  const randomIndex = Math.floor(Math.random() * possibleQuotes);
-  console.log(db[randomIndex].quote);
+  const dispatch = useDispatch();
+
+  const newQuote = useSelector((state) => state.quote);
 
   return (
     <main id="quote-wrapper">
@@ -12,15 +12,17 @@ function App() {
         <article id="quote">
           <h1 id="text">
             <i className="fa-solid fa-quote-left"></i>
-            {db[randomIndex].quote}
+            <br />
+            {newQuote.quote}
+            <br />
             <i className="fa-solid fa-quote-right"></i>
           </h1>
           <div>
             <p id="author">
-              from <em>{db[randomIndex].by}</em>
+              from <em>{newQuote.by}</em>
             </p>
             <p id="movie">
-              in {db[randomIndex].from} ({db[randomIndex].year})
+              in {newQuote.from} ({newQuote.year})
             </p>
           </div>
         </article>
@@ -33,7 +35,16 @@ function App() {
               tumblr
             </a>
           </div>
-          <button id="new-quote">New quote</button>
+          <button
+            id="new-quote"
+            onClick={() =>
+              dispatch({
+                type: "quote/changeQuote",
+              })
+            }
+          >
+            New quote
+          </button>
         </aside>
       </section>
       <aside id="creator">by me</aside>
