@@ -11,11 +11,11 @@ function App() {
       <section id="quote-box">
         <article id="quote">
           <h1 id="text">
-            <i className="fa-solid fa-quote-left"></i>
+            <span>&quot;</span>
             <br />
             {newQuote.quote}
             <br />
-            <i className="fa-solid fa-quote-right"></i>
+            <span className="bottom-quote">&quot;</span>
           </h1>
           <div>
             <p id="author">
