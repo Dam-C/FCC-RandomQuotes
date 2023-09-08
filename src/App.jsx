@@ -47,7 +47,7 @@ function App() {
           </button>
         </aside>
       </section>
-      <aside id="creator">by me</aside>
+      <aside id="creator">by Damien Charlois</aside>
     </main>
   );
 }

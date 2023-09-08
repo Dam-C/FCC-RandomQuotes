@@ -51,7 +51,8 @@ body {
 
 #author,
 #movie {
-  margin: 0 0 5px 0;
+  font-size: 13px;
+  margin: 0 0 15px 0;
   text-align: right;
 }
 
@@ -72,7 +73,7 @@ body {
   background-color: var(--secondary);
 }
 #creator {
-  color: white;
+  color: var(--quadruary);
   margin: 15px;
   text-align: center;
 }
@@ -93,4 +94,11 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+#tweet-quote:hover,
+#tumblr-quote:hover {
+  color: var(--primary);
+  background-color: var(--secondary);
+  color: var(--quadruary);
 }
