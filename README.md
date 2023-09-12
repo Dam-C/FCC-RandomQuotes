@@ -24,6 +24,6 @@ How to use
 
 You can either see the fully functionnal project deployed with Netlify at this adress :
 
-ad
+https://comfy-paprenjak-3a8bf6.netlify.app/
 
 Or you can donwload it, use any IDE of your choosing and in a terminal, make sure to be in the "random-quotes" folder then type "yarn dev", your terminal should give you a url, use it to open the project in your web browser.
